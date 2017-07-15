@@ -1,0 +1,31 @@
+{
+    "cycle": 1,
+    "biaoq": [
+        {
+            "id": 1,
+            "name": "枕额肌（FDO）"
+        },
+        {
+            "id": 2,
+            "name": "枕额肌（FDO）"
+        }
+    ],
+    "tips": "现在正是孕早期，这个时候做B超是为了确认宫内妊娠是否正常",
+    "indicators": [
+        {
+            "id": 1,
+            "indicatorsName": "BPD双顶",
+            "indicatorContent": "7.50+0.65"
+        },
+        {
+            "id": 2,
+            "indicatorsName": "BPD双顶",
+            "indicatorContent": "7.50+0.65"
+        },
+        {
+            "id": 3,
+            "indicatorsName": "BPD双顶",
+            "indicatorContent": "7.50+0.65"
+        }
+    ]
+}

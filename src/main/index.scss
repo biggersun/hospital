@@ -1,0 +1,67 @@
+@import 'assets/css/variables';
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    -webkit-tap-highlight-color: transparent;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    color: $text-second-color;
+    background: $bg-color;
+    font-family: -apple-system-font, Helvetica Neue, sans-serif;
+    position: relative;
+    font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+}
+dl, dt, dd, p, h1, h2, h3, h4, h5, h6, table, tr, td, form, input, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a, input, button, select {
+  outline: none;
+  text-decoration: none;
+  &:hover, &:active, &:visited, &:link, &:focus {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+a {
+    text-decoration: none;
+    color: $text-second-color;
+}
+
+
+em {
+    font-style: normal;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(250, 255, 189);
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
+
+option{
+    min-height: 0;
+}
+
+.loading{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

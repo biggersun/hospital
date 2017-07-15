@@ -1,0 +1,3 @@
+export const FIND_HOSPITALS = 'FIND_HOSPITALS'
+export const FIND_HOSPITAL = 'FIND_HOSPITAL'
+
