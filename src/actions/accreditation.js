@@ -3,32 +3,34 @@ import * as api from 'constants/api'
 import { get } from 'assets/js/request'
 import { actionCreator } from 'assets/js/util'
 
-const renderList = actionCreator(actionTypes.FIND_HOSPITALS)
+const renderAccreditation = actionCreator(actionTypes.FIND_CERTIFICATELIST)
+const renderAccreditationDetail = actionCreator(actionTypes.FIND_CERTIFICATECONTENT)
 
-export function fetchHospitalList(opts = {}) {
+export function fetchAccreditation(opts = {}) {
     return async (dispatch) => {
         const params = Object.assign({}, opts)
         let payload
 
         try {
-            payload = await get(api.FIND_HOSPITALS, params)
+            payload = await get(api.FIND_CERTIFICATELIST, params)
         } catch (e) {
             return
         }
-        dispatch(renderList(payload))
+        dispatch(renderAccreditation(payload))
     }
 }
 
-export function searchHospital(opts = {}) {
+export function fetchAccreditationDetail(opts = {}) {
     return async (dispatch) => {
         const params = Object.assign({}, opts)
         let payload
 
         try {
-            payload = await get(api.SEARCH_HOSPITALS, params)
+            payload = await get(api.FIND_CERTIFICATECONTENT, params)
         } catch (e) {
             return
         }
-        dispatch(renderList(payload))
+        dispatch(renderAccreditationDetail(payload))
     }
 }
+

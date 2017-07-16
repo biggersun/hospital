@@ -10,9 +10,9 @@ const propTypes = {
 }
 
 const defaultProps = {
-    title: '檬宝宝孕育',
-    backTo: 'index',
-    color: '#75C5C2',
+    title: '医院',
+    backTo: '',
+    color: '#FDB3B6',
 }
 
 class Title extends Component {
@@ -29,7 +29,6 @@ class Title extends Component {
                 {backTo ? <div className="back-btn" onClick={() => hashHistory.push(backTo)} />
                 : <div className="back-btn" onClick={() => hashHistory.goBack()} />
                 }
-
                 <h1>{title}</h1>
                 <div />
             </div>

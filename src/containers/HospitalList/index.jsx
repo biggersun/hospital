@@ -9,6 +9,7 @@ import './index.scss'
 
 const propTypes = {
     fetchHospitalList: PropTypes.func.isRequired,
+    searchHospital: PropTypes.func.isRequired,
     content: PropTypes.array.isRequired,
 }
 
@@ -19,11 +20,21 @@ const defaultProps = {
 class HospitalList extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-        }
+        this.handleCancel = this.handleCancel.bind(this)
+        this.handleSearch = this.handleSearch.bind(this)
     }
 
     componentDidMount() {
+        const { fetchHospitalList } = this.props
+        fetchHospitalList()
+    }
+
+    handleSearch(text) {
+        const { searchHospital } = this.props
+        searchHospital({ name: text })
+    }
+
+    handleCancel() {
         const { fetchHospitalList } = this.props
         fetchHospitalList()
     }
@@ -37,19 +48,25 @@ class HospitalList extends Component {
                 />
                 <SearchBar
                     searchText="搜索医院"
+                    handleSubmit={this.handleSearch}
+                    handleCancel={this.handleCancel}
                 />
                 <ul>
                     {content.map(item => <li
                         key={item.hospitalId}
-                        onClick={() => {
-                            browserHistory.push(`hospital-detail?id=${item.hospitalId}`)
-                        }}
                     >
-                        <div className="title">
+                        <div
+                            className="title"
+                            onClick={() => {
+                                browserHistory.push(`hospital-detail?id=${item.hospitalId}`)
+                            }}
+                        >
                             <h3>{item.name}</h3>
                             <p>{item.level}</p>
                         </div>
-                        <div className="address"><i />{item.address}</div>
+                        <a href={item.mapurl}>
+                            <div className="address"><i />{item.address}</div>
+                        </a>
                     </li>)}
                 </ul>
             </div>
