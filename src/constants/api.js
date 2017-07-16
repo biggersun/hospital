@@ -1,7 +1,7 @@
 const prefix = '/lemonbaby'
 
 export const FIND_HOSPITALS = `${prefix}/findHospitals`
-export const SEARCH_HOSPITALS = `${prefix}/searchHospital`
+export const SEARCH_HOSPITALS = `${prefix}/searchHostpital`
 
 export const FIND_HOSPITAL_MAIN = `${prefix}/findHospitalmain`
 
