@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
-import { Router, Route, IndexRedirect, browserHistory } from 'react-router'
+import { Router, Route, IndexRedirect, hashHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 import { relativeToRoot } from 'assets/js/util'
 
@@ -14,7 +14,7 @@ import Accreditation from 'containers/Accreditation'
 import AccreditationDetail from 'containers/AccreditationDetail'
 
 export default function RouteTree({ store, indexPath }) {
-    const history = syncHistoryWithStore(browserHistory, store)
+    const history = syncHistoryWithStore(hashHistory, store)
     return (
         <Provider store={store}>
             <Router history={history}>

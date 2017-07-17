@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { browserHistory } from 'react-router'
+import { hashHistory } from 'react-router'
 import * as actions from 'actions/accreditation'
 import Title from 'components/Title'
 import './index.scss'
@@ -43,7 +43,7 @@ class Accreditation extends Component {
                     <ul>
                         {content1.map(item => <li
                             key={item.certificateId}
-                            onClick={() => browserHistory.push(`accreditation-detail?id=${item.certificateId}`)}
+                            onClick={() => hashHistory.push(`accreditation-detail?id=${item.certificateId}`)}
                         >
                             <h3>{item.name}</h3>
                             <p>{item.profile}</p>
@@ -55,7 +55,7 @@ class Accreditation extends Component {
                     <ul>
                         {content2.map(item => <li
                             key={item.certificateId}
-                            onClick={() => browserHistory.push(`accreditation-detail?id=${item.certificateId}`)}
+                            onClick={() => hashHistory.push(`accreditation-detail?id=${item.certificateId}`)}
                         >
                             <h3>{item.name}</h3>
                             <p>{item.profile}</p>

@@ -1,12 +1,12 @@
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 import thunk from 'redux-thunk'
-import { browserHistory } from 'react-router'
+import { hashHistory } from 'react-router'
 import { routerReducer, routerMiddleware } from 'react-router-redux'
 
 import reducers from '../reducers'
 
 export default function createStoreByInitState(initState) {
-    const middlewares = [ thunk, routerMiddleware(browserHistory) ]
+    const middlewares = [ thunk, routerMiddleware(hashHistory) ]
 
     let composeEnhancers = compose
 

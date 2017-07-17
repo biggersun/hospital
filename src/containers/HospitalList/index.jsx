@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { browserHistory } from 'react-router'
+import { hashHistory } from 'react-router'
 import * as actions from 'actions/hospitalList'
 import PropTypes from 'prop-types'
 import SearchBar from 'components/SearchBar'
@@ -58,7 +58,7 @@ class HospitalList extends Component {
                         <div
                             className="title"
                             onClick={() => {
-                                browserHistory.push(`hospital-detail?id=${item.hospitalId}`)
+                                hashHistory.push(`hospital-detail?id=${item.hospitalId}`)
                             }}
                         >
                             <h3>{item.name}</h3>

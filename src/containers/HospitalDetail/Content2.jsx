@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { browserHistory } from 'react-router'
+import { hashHistory } from 'react-router'
 
 const propTypes = {
     department: PropTypes.object.isRequired,
@@ -44,7 +44,7 @@ class Content2 extends Component {
                     <ul>
                         {department.doctors.map(item => <li
                             key={item.doctorId}
-                            onClick={() => { browserHistory.push(`doctor-detail?id=${item.doctorId}`) }}
+                            onClick={() => { hashHistory.push(`doctor-detail?id=${item.doctorId}`) }}
                         >
                             <img src={doctorsImg[item.imagePath]} alt="" />
                             <p>{item.name}</p>
