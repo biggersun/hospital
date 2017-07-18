@@ -1,8 +1,13 @@
 @import 'assets/css/variables.scss';
 
 .doctor-container{
+    background: #FFF;
+    min-height: 100vh;
     & .content{
-        padding: 10px $content-padding;
+        padding: 0 $content-padding 10px $content-padding;
+        color: $text-gray-color;
+        line-height: 24px;
+        font-size: 13px;
     }
     & .doctor-title{
         margin-top: 40px;
@@ -22,8 +27,24 @@
 
             & .content-top{
                 box-sizing: border-box;
-                border-bottom: 1px solid $border-color;
                 padding-bottom: 3px;
+                position: relative;
+
+                &::after{
+                    content: " ";
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    right: 0;
+                    height: 1px;
+                    border-top: 1px solid #F8F6F7;
+                    color: #e5e5e5;
+                    -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+                    -webkit-transform: scaleY(0.5);
+                    transform: scaleY(0.5);
+                    z-index: 2;
+                }
 
                 & span:first-child{
                     font-size: 16px;

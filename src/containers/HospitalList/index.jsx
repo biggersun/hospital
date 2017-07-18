@@ -45,6 +45,7 @@ class HospitalList extends Component {
             <div className="hospital-list-container">
                 <Title
                     title="附近医院"
+                    backBtn={false}
                 />
                 <SearchBar
                     searchText="搜索医院"

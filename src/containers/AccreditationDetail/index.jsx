@@ -23,7 +23,7 @@ class HospitalDetail2 extends Component {
         this.state = {}
     }
 
-    componentDidMount() {
+    componentWillMount() {
         const { fetchAccreditationDetail, id } = this.props
         const params = {
             id,
@@ -33,6 +33,7 @@ class HospitalDetail2 extends Component {
 
     render() {
         const { content } = this.props
+        location.href = content
         return (
             <div>
                 <Title

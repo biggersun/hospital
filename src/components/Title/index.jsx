@@ -6,6 +6,7 @@ import './index.scss'
 const propTypes = {
     title: PropTypes.string.isRequired,
     backTo: PropTypes.string.isRequired,
+    backBtn: PropTypes.bool.isRequired,
     color: PropTypes.string,
 }
 
@@ -13,6 +14,7 @@ const defaultProps = {
     title: '医院',
     backTo: '',
     color: '#FDB3B6',
+    backBtn: true,
 }
 
 class Title extends Component {
@@ -23,12 +25,17 @@ class Title extends Component {
     }
 
     render() {
-        const { title, backTo, color } = this.props
+        const { title, backTo, color, backBtn } = this.props
+        let backToBtn
+        if (backBtn) {
+            backToBtn = backTo ? <div className="back-btn" onClick={() => hashHistory.push(backTo)} />
+                : <div className="back-btn" onClick={() => hashHistory.goBack()} />
+        } else {
+            backToBtn = <div />
+        }
         return (
             <div className="page-title" style={{ backgroundColor: color }}>
-                {backTo ? <div className="back-btn" onClick={() => hashHistory.push(backTo)} />
-                : <div className="back-btn" onClick={() => hashHistory.goBack()} />
-                }
+                {backToBtn}
                 <h1>{title}</h1>
                 <div />
             </div>

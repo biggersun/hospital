@@ -56,7 +56,7 @@ class Content1 extends Component {
                 <div className="content-3">
                     <Link to={`accreditation?id=${hospital.cityId}`}>
                         <div className="title canClick">办证指南</div>
-                        <p>需要到哪里办理证件</p>
+                        <p>孕期到育儿相关的所有证件信息，点击查看</p>
                     </Link>
                 </div>
             </div>

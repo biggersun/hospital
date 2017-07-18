@@ -5,12 +5,28 @@
         background-color: #FFF;
         margin-top: 40px;
         display: flex;
-        overflow: scroll;
         font-size: 16px;
-        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        position: relative;
 
         &::-webkit-scrollbar {
           display: none;
+        }
+
+        &::after{
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 1px;
+            border-top: 1px solid #e5e5e5;
+            color: #e5e5e5;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            z-index: 2;
         }
 
         & li{
@@ -19,7 +35,6 @@
             text-align: center;
             line-height: 42px;
             padding: 0 20px;
-            border-bottom: 1px solid $border-color;
 
             &.active{
                 color: $brand-color;
@@ -81,8 +96,23 @@
                 align-items: center;
                 height: 33px;
                 padding-right: 20px;
-                border-right: 1px solid $brand-color;
                 line-height: 1;
+                position: relative;
+
+                &::after{
+                    content: " ";
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 1px;
+                    bottom: 0;
+                    border-right: 1px solid #e5e5e5;
+                    color: #e5e5e5;
+                    -webkit-transform-origin: 100% 0;
+                    transform-origin: 100% 0;
+                    -webkit-transform: scaleX(0.5);
+                    transform: scaleX(0.5);
+                }
 
                 &::before{
                     content: '';
@@ -196,9 +226,26 @@
             display: flex;
             align-items: center;
             background-color: #FFF;
-            border-top: 1px solid $border-color;
             margin-bottom: 3px;
             padding: 13px 16px;
+            position: relative;
+
+            &::after{
+                content: " ";
+                position: absolute;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                height: 1px;
+                border-top: 1px solid #F8F6F7;
+                color: #e5e5e5;
+                -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+                -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+                z-index: 2;
+            }
 
             &::before{
                 content: "";

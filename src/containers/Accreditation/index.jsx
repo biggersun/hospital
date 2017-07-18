@@ -8,6 +8,7 @@ import './index.scss'
 
 const propTypes = {
     fetchAccreditation: PropTypes.func.isRequired,
+    fetchAccreditationDetail: PropTypes.func.isRequired,
     id: PropTypes.number.isRequired,
     content1: PropTypes.array.isRequired,
     content2: PropTypes.array.isRequired,
@@ -25,6 +26,11 @@ class Accreditation extends Component {
     componentDidMount() {
         const { id, fetchAccreditation } = this.props
         fetchAccreditation({ id })
+    }
+
+    handleClick(id) {
+        const { fetchAccreditationDetail } = this.props
+        fetchAccreditationDetail({ id })
     }
 
     render() {
