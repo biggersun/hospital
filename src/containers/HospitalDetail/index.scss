@@ -106,8 +106,8 @@
                     top: 0;
                     width: 1px;
                     bottom: 0;
-                    border-right: 1px solid #e5e5e5;
-                    color: #e5e5e5;
+                    border-right: 1px solid #F8F6F7;
+                    color: #F8F6F7;
                     -webkit-transform-origin: 100% 0;
                     transform-origin: 100% 0;
                     -webkit-transform: scaleX(0.5);
@@ -198,8 +198,23 @@
                 align-items: center;
                 height: 33px;
                 padding-right: 20px;
-                border-right: 1px solid $brand-color;
                 line-height: 1;
+                position: relative;
+
+                &::after{
+                    content: " ";
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 1px;
+                    bottom: 0;
+                    border-right: 1px solid #F8F6F7;
+                    color: #F8F6F7;
+                    -webkit-transform-origin: 100% 0;
+                    transform-origin: 100% 0;
+                    -webkit-transform: scaleX(0.5);
+                    transform: scaleX(0.5);
+                }
 
                 &::before{
                     content: '';
