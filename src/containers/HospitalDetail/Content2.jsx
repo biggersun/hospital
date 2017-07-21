@@ -40,7 +40,7 @@ class Content2 extends Component {
                     <p>{department.proposal}</p>
                 </div>
                 <div className="content content4">
-                    <div className="title">产科医生</div>
+                    <div className="title">医生</div>
                     <ul>
                         {department.doctors.map(item => <li
                             key={item.doctorId}
