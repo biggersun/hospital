@@ -43,15 +43,15 @@ class Content1 extends Component {
                 <div className="content-3">
                     <div className="title">挂号指南</div>
                     <div className="title2">电话预约</div>
-                    <p>{hospital.tel}</p>
+                    <p>{hospital.tel || '暂无信息'}</p>
                 </div>
                 <div className="content-3">
                     <div className="title">交通·停车</div>
-                    <p>{hospital.traffic}</p>
+                    <p>{hospital.traffic || '暂无信息'}</p>
                 </div>
                 <div className="content-3">
                     <div className="title">建档说明</div>
-                    <p>必须到社区医院建围保</p>
+                    <p>{hospital.buildFile || '暂无信息'}</p>
                 </div>
                 <div className="content-3">
                     <Link to={`accreditation?id=${hospital.cityId}`}>

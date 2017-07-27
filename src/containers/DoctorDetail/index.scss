@@ -7,7 +7,7 @@
         padding: 0 $content-padding 10px $content-padding;
         color: $text-gray-color;
         line-height: 24px;
-        font-size: 13px;
+        font-size: 15px;
     }
     & .doctor-title{
         margin-top: 40px;
@@ -47,11 +47,11 @@
                 }
 
                 & span:first-child{
-                    font-size: 16px;
+                    font-size: 18px;
                     margin-right: 10px;
                 }
                 & span:last-child{
-                    font-size: 13px;
+                    font-size: 15px;
                     color: $text-gray-color;
                 }
             }

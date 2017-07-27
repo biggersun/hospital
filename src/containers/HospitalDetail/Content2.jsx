@@ -52,7 +52,7 @@ class Content2 extends Component {
                     </ul>
                 </div>
                 <div className="content">
-                    <div className="title">床位信息</div>
+                    <div className="title">信息公示</div>
                     <p>{department.bed}</p>
                 </div>
             </div>
