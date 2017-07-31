@@ -11,7 +11,7 @@ import HospitalDetail from 'containers/HospitalDetail'
 import HospitalDetail2 from 'containers/HospitalDetail2'
 import DoctorDetail from 'containers/DoctorDetail'
 import Accreditation from 'containers/Accreditation'
-import AccreditationDetail from 'containers/AccreditationDetail'
+import DepDetail from 'containers/DepartmentDetail'
 
 export default function RouteTree({ store, indexPath }) {
     const history = syncHistoryWithStore(hashHistory, store)
@@ -25,7 +25,7 @@ export default function RouteTree({ store, indexPath }) {
                     <Route path="hospital-detail2" component={HospitalDetail2} />
                     <Route path="doctor-detail" component={DoctorDetail} />
                     <Route path="accreditation" component={Accreditation} />
-                    <Route path="accreditation-detail" component={AccreditationDetail} />
+                    <Route path="department-detail" component={DepDetail} />
                 </Route>
             </Router>
         </Provider>

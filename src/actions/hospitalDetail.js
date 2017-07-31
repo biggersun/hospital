@@ -5,6 +5,7 @@ import { actionCreator } from 'assets/js/util'
 
 const renderHospital = actionCreator(actionTypes.FIND_HOSPITAL_MAIN)
 const renderHospital2 = actionCreator(actionTypes.FIND_HOSPITAL)
+const renderDep = actionCreator(actionTypes.FIND_DEP)
 
 export function fetchHospitalDetail(opts = {}) {
     return async (dispatch) => {
@@ -31,5 +32,20 @@ export function fetchHospitalDetail2(opts = {}) {
             return
         }
         dispatch(renderHospital2(payload))
+    }
+}
+
+
+export function fetchDep(opts = {}) {
+    return async (dispatch) => {
+        const params = Object.assign({}, opts)
+        let payload
+
+        try {
+            payload = await get(api.FIND_DEP, params)
+        } catch (e) {
+            return
+        }
+        dispatch(renderDep(payload))
     }
 }

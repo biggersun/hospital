@@ -17,6 +17,13 @@ export default function hospitalDetail(state = initState, { type, payload }) {
             hostpital2: content[0],
         }
     }
+    case actionTypes.FIND_DEP: {
+        const { content } = payload
+        return {
+            ...state,
+            depDetail: content[0],
+        }
+    }
     default:
         return state
     }

@@ -192,6 +192,15 @@
             }
         }
 
+        & .content1{
+            & a{
+                display: flex;
+            }
+            & em{
+                color: $brand-color;
+            }
+        }
+
         & .content2{
             margin-bottom: 0;
             display: flex;

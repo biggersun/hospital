@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { hashHistory } from 'react-router'
+import { Link, hashHistory } from 'react-router'
+import URI from 'urijs'
+import { DEPARTMENT_DETIAL } from 'constants/router'
 
 const propTypes = {
     department: PropTypes.object.isRequired,
@@ -21,14 +23,24 @@ class Content2 extends Component {
             department,
             doctorsImg,
         } = this.props
+        const departmentUri = new URI(DEPARTMENT_DETIAL)
+        departmentUri.setQuery({
+            id: department.departmentId,
+            name: department.name,
+        })
         return (
             <div className="department-detail">
                 <div
                     className="content content1"
                 >
-                    <p
-                        dangerouslySetInnerHTML={{ __html: department.profile }}
-                    />
+                    <Link
+                        to={departmentUri.toString()}
+                    >
+                        <p
+                            dangerouslySetInnerHTML={{ __html: department.profile }}
+                        />
+                        <em>查看完整介绍》</em>
+                    </Link>
                 </div>
                 <div className="content content2">
                     <div className="left">

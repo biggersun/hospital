@@ -49,7 +49,7 @@ class Accreditation extends Component {
                     <ul>
                         {content1.map(item => <a
                             key={item.certificateId}
-                            href={item.targetUrl}
+                            href={item.content}
                         ><li>
                             <h3>{item.name}</h3>
                             <p>{item.profile}</p>
@@ -60,7 +60,7 @@ class Accreditation extends Component {
                     <div className="title">新生儿办证</div>
                     <ul>
                         {content2.map(item => <a
-                            href={item.targetUrl}
+                            href={item.content}
                             key={item.certificateId}
                         ><li>
                             <h3>{item.name}</h3>

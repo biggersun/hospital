@@ -4,6 +4,7 @@ export const FIND_HOSPITALS = `${prefix}/findHospitals`
 export const SEARCH_HOSPITALS = `${prefix}/searchHostpital`
 
 export const FIND_HOSPITAL_MAIN = `${prefix}/findHospitalmain`
+export const FIND_DEP = `${prefix}/Dep`
 
 export const FIND_HOSPITAL = `${prefix}/findHospital`
 export const FINDT = `${prefix}/findDoctor`
