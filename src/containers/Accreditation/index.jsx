@@ -47,25 +47,26 @@ class Accreditation extends Component {
                 <div className="content content1">
                     <div className="title">孕期办证</div>
                     <ul>
-                        {content1.map(item => <li
+                        {content1.map(item => <a
                             key={item.certificateId}
-                            onClick={() => hashHistory.push(`accreditation-detail?id=${item.certificateId}`)}
-                        >
+                            href={item.targetUrl}
+                        ><li>
                             <h3>{item.name}</h3>
                             <p>{item.profile}</p>
-                        </li>)}
+                        </li></a>)}
                     </ul>
                 </div>
                 <div className="content">
                     <div className="title">新生儿办证</div>
                     <ul>
-                        {content2.map(item => <li
+                        {content2.map(item => <a
+                            href={item.targetUrl}
                             key={item.certificateId}
-                            onClick={() => hashHistory.push(`accreditation-detail?id=${item.certificateId}`)}
-                        >
+                        ><li>
                             <h3>{item.name}</h3>
                             <p>{item.profile}</p>
-                        </li>)}
+
+                        </li></a>)}
                     </ul>
                 </div>
             </div>

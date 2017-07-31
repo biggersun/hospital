@@ -30,6 +30,7 @@ export function fetchAccreditationDetail(opts = {}) {
         } catch (e) {
             return
         }
+        location.href = payload
         dispatch(renderAccreditationDetail(payload))
     }
 }
