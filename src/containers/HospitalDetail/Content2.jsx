@@ -36,10 +36,7 @@ class Content2 extends Component {
                     <Link
                         to={departmentUri.toString()}
                     >
-                        <p
-                            dangerouslySetInnerHTML={{ __html: department.profile }}
-                        />
-                        <em>查看完整介绍》</em>
+                        <p>{department.profile}<em>查看完整介绍》</em></p>
                     </Link>
                 </div>
                 <div className="content content2">
